@@ -1,0 +1,4 @@
+node_modules/
+
+# front-end test results
+e2e/results
