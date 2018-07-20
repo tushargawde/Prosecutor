@@ -48,6 +48,14 @@ module.exports = {
     Save_Button:element(by.xpath('//*[@id="content"]/form/p/button[1]')),
     W:element(by.xpath('//span[@title="White"]')),
     M:element(by.xpath('//span[@title="Male"]')),
+    Generate_Separator_Sheets: element(by.linkText("Generate Separator Sheets")),
+    Sepeator_caseNo:element(by.id("CaseNumber")),
+    DMETypeDropdown: element(by.id('s2id_DmeUploadType')),
+    DMETypeSearch:element(by.id('s2id_autogen1_search')),
+    Lab_Reports:element(by.xpath(".//li/div/span[@title='Lab Reports']")),
+    Generate_Separator_Sheets_Add_button: element(by.xpath("//button[contains(text(),'Add')]")),
+    Added_Type:element(by.xpath('//*[@id="dmeuploadtype-entries"]/tbody/tr[1]/td[1]'))
+
 
 
 };
