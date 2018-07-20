@@ -7,6 +7,7 @@ When In "prosecutor" page, I hover the mouse over "Case_entry"
 And In "prosecutor" page, I click "Protective_order_entry"
 #And In "prosecutor" page, I set the "submission" drop down to "Protective Order" 
 And In "prosecutor" page, I fill the fields with the following data
+|field|input|
 |Incident_Remark|TD_formdata_GenerateSheet_Incident|
 |LastName|TD_formdata_GenerateSheet_LastName|
 |FirstName|TD_formdata_GenerateSheet_FirstName|
