@@ -1,6 +1,7 @@
 
 
 'use strict';
+var helper = require('../helpers/helpers');
 var chai = require('chai');
 var chaiAsPromised = require('chai-as-promised');
 chai.use(chaiAsPromised);
@@ -10,7 +11,7 @@ module.exports = {
     Protective_order_entry:element(by.linkText("Protective Order Entry")),
     submission: element(by.id('SubmissionTypeValues')),
     Incident_Remark:element(by.id('IncidentRemark')),
-    LeastNam: element(by.id("PrimaryVictimLastName")),
+    LastName: element(by.id("PrimaryVictimLastName")),
     FirstName:element(by.id("PrimaryVictimFirstName")),
     MiddleName:element(by.id("PrimaryVictimMiddleName")),
     Suffix:element(by.id("PrimaryVictimSuffixName")),
@@ -54,8 +55,45 @@ module.exports = {
     DMETypeSearch:element(by.id('s2id_autogen1_search')),
     Lab_Reports:element(by.xpath(".//li/div/span[@title='Lab Reports']")),
     Generate_Separator_Sheets_Add_button: element(by.xpath("//button[contains(text(),'Add')]")),
-    Added_Type:element(by.xpath('//*[@id="dmeuploadtype-entries"]/tbody/tr[1]/td[1]'))
+    Added_Type:element(by.xpath('//*[@id="dmeuploadtype-entries"]/tbody/tr[1]/td[1]')),
 
 
+    Bolo: element(by.linkText("BOLO List")),
+    Add: element(by.linkText("Add")),
+    Suspect: element(by.id("Suspect")),
+    SuspectIdentifiers: element(by.id("SuspectIdentifiers")),
+    Offense: element(by.id("Offense")),
+    OffenseDate: element(by.id("OffenseDate")),
+    OffenseReportNumber: element(by.id("OffenseReportNumber")),
+    SearchDropdown: element(by.id("s2id_autogen152_search")),
+    Reporter: element(by.id("Reporter")),
+    ActionRequired: element(by.id("ActionRequired")),
+    Save_btn: element(by.xpath("//button[contains(text(),'Save')]")),
+    Delete_btn: element(by.xpath("//tr[1]//a[@data-icon='x']")),
+    dropdownVal: element(by.xpath("//li/div[contains(text(),'MARBLE FALLS PD')]")),
+    
+
+
+
+
+    fillOutBolo: function (filldata) {        
+    helper.inputTextbox(this.Suspect, filldata.Suspect)
+    helper.inputTextbox(this.SuspectIdentifiers, filldata.SuspectIdentifiers)
+    helper.inputTextbox(this.Offense, filldata.Offense)
+    helper.inputTextbox(this.OffenseDate, filldata.OffenseDate)
+    helper.inputTextbox(this.OffenseReportNumber, filldata.OffenseReportNumber)
+    helper.inputTextbox(this.Reporter, filldata.Reporter)
+    helper.inputTextbox(this.ActionRequired, filldata.ActionRequired)    
+},
+ fillProtective:function(dataprotective){
+     helper.inputTextbox(this.Incident_Remark, dataprotective.Incident)
+     helper.inputTextbox(this.LastName, dataprotective.LastName)
+     helper.inputTextbox(this.FirstName, dataprotective.FirstName)
+     helper.inputTextbox(this.MiddleName, dataprotective.MiddleName)
+     helper.inputTextbox(this.DOB, dataprotective.DOB)
+     helper.inputTextbox(this.Defendant_LastName, dataprotective.DefendentLast)
+     helper.inputTextbox(this.Defendant_FirstName, dataprotective.DefendentFirst)
+     helper.inputTextbox(this.Defendant_MiddleName, dataprotective.DefendentMiddle)
+ }
 
 };

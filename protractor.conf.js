@@ -22,7 +22,7 @@ exports.config = {
         require: [
             './e2e/step_definitions/*.js',
              ],
-        tags: ['@Test2'],
+        tags: ['@run'],
         format: 'json:e2e/results/results.json',
         profile: false,
         'no-source': true,
